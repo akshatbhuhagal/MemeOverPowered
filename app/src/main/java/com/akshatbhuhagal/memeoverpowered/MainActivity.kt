@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         binding.progressBar.visibility = View.VISIBLE
 
 
-        val url = "https://meme-api.herokuapp.com/gimme"
+        val url = "https://meme-api.com/gimme"
 
         val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null,
             { response ->
