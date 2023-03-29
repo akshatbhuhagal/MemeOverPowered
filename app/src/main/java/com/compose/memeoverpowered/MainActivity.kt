@@ -5,9 +5,7 @@ import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -41,6 +39,13 @@ class MainActivity : ComponentActivity() {
                         verticalArrangement = Arrangement.Center,
                     ) {
 
+
+                        AsyncImage(
+                            model = memeUrl,
+                            contentDescription = null,
+                            modifier = Modifier.fillMaxHeight(0.5f).fillMaxWidth(1f)
+                        )
+
                         Button(onClick = {
 
                             val url = "https://meme-api.com/gimme"
@@ -62,10 +67,6 @@ class MainActivity : ComponentActivity() {
                             Text(text = "Get Meme")
                         }
 
-                        AsyncImage(
-                            model = memeUrl,
-                            contentDescription = null
-                        )
 
 
                     }
